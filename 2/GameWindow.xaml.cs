@@ -33,6 +33,8 @@ namespace _2
             grid_game.Visibility = Visibility.Collapsed;
             grid_statistics.Visibility = Visibility.Collapsed;
 
+            list_statistics.ItemsSource = MenuUtils.Users;
+
             InitializeLists();
         }
 

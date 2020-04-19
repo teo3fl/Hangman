@@ -34,7 +34,7 @@
 
         </Menu>
 
-        <Grid x:Name="grid_game" Visibility="Visible" Margin="0,26,0,0">
+        <Grid x:Name="grid_game" Visibility="Collapsed" Margin="0,26,0,0">
 
             <Image x:Name="img_user" HorizontalAlignment="Left" Height="100" Margin="10,10,0,0" VerticalAlignment="Top" Width="100"/>
             <TextBlock x:Name="txt_user_data" HorizontalAlignment="Left" Height="74" Margin="129,21,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="354" Background="Red" FontSize="22" Padding="8"/>
@@ -80,7 +80,18 @@
 
         </Grid>
 
-        <Grid x:Name="grid_statistics" Visibility="Collapsed" Margin="0,26,0,0">
+        <Grid x:Name="grid_statistics" Visibility="Visible" Margin="0,26,0,0">
+            <ListView x:Name="list_statistics" HorizontalAlignment="Left" Height="354" Margin="24,50,0,0" VerticalAlignment="Top" Width="627">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="Name" Width="420" DisplayMemberBinding="{Binding Value.Name}"/>
+                        <GridViewColumn Header="Games played" Width="100" DisplayMemberBinding="{Binding Value.GamesPlayed}"/>
+                        <GridViewColumn Header="Games Won" Width="100" DisplayMemberBinding="{Binding Value.GamesWon}"/>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+
+
 
         </Grid>
 
