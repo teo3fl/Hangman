@@ -5,44 +5,84 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:_2"
         mc:Ignorable="d"
-        Title="GameWindow" Height="450" Width="658.607">
+        Title="GameWindow" Height="522" Width="686.607">
     <Grid Background="#FFFF7272">
 
-        <Menu HorizontalAlignment="Left" Height="26" VerticalAlignment="Top" Width="192">
-            
+        <Menu HorizontalAlignment="Left" Height="26" VerticalAlignment="Top" Width="191">
+
             <MenuItem x:Name="menu_file" FontSize="18" Header="File" BorderBrush="#FFC3C3C3" Background="{x:Null}">
-                <MenuItem Header="New Game"/>
-                <MenuItem Header="Open Game"/>
-                <MenuItem Header="Save Game"/>
-                <MenuItem Header="Statistics"/>
-                <MenuItem Header="Exit"/>
+                <MenuItem Header="New Game" Click="new_game_Click"/>
+                <MenuItem Header="Open Game" Click="open_game_Click"/>
+                <MenuItem Header="Save Game" Click="save_game_Click"/>
+                <MenuItem Header="Statistics" Click="statistics_Click"/>
+                <MenuItem Header="Exit" Click="exit_Click"/>
 
             </MenuItem>
 
             <MenuItem  x:Name="menu_categories" FontSize="18" Header="Categories" BorderBrush="#FFC3C3C3" Background="{x:Null}">
-                <CheckBox Content="All Categories"/>
-                <CheckBox Content="Cars"/>
-                <CheckBox Content="Mountains"/>
-                <CheckBox Content="Movies"/>
-                <CheckBox Content="Rivers"/>
-                <CheckBox Content="States"/>
+                <CheckBox x:Name="checkBox_all_categories" Content="All Categories" Click="all_categories_Click"/>
+                <CheckBox x:Name="checkBox_cars" Content="Cars" Click="category_Click"/>
+                <CheckBox x:Name="checkBox_mountains" Content="Mountains" Click="category_Click"/>
+                <CheckBox x:Name="checkBox_movies" Content="Movies" Click="category_Click"/>
+                <CheckBox x:Name="checkBox_rivers" Content="Rivers" Click="category_Click"/>
+                <CheckBox x:Name="checkBox_states" Content="States" Click="category_Click"/>
             </MenuItem>
 
-            <MenuItem  x:Name="menu_help" FontSize="18" Header="Help" BorderBrush="#FFC3C3C3" Background="{x:Null}">
-               
+            <MenuItem  x:Name="menu_help" FontSize="18" Header="Help" BorderBrush="#FFC3C3C3" Background="{x:Null}" Click="menu_help_Click">
+
             </MenuItem>
 
         </Menu>
 
+        <Grid x:Name="grid_game" Visibility="Visible" Margin="0,26,0,0">
 
+            <Image x:Name="img_user" HorizontalAlignment="Left" Height="100" Margin="10,10,0,0" VerticalAlignment="Top" Width="100"/>
+            <TextBlock x:Name="txt_user_data" HorizontalAlignment="Left" Height="74" Margin="129,21,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="354" Background="Red" FontSize="22" Padding="8"/>
 
-        <Grid x:Name="grid_game" Visibility="Visible" Margin="0,43,0,0">
-            <Image HorizontalAlignment="Left" Height="100" Margin="49,78,0,0" VerticalAlignment="Top" Width="100"/>
+            <Image x:Name="img_stage" HorizontalAlignment="Left" Height="227" Margin="518,21,0,0" VerticalAlignment="Top" Width="141"/>
+           
+            <Button x:Name="btn_a" Content="A" HorizontalAlignment="Left" Height="45" Margin="35,131,0,0" VerticalAlignment="Top" Width="45" FontWeight="Bold" FontSize="20" Click="Letter_Button_Click"/>
+            <Button x:Name="btn_b" Content="B" HorizontalAlignment="Left" Height="45" Margin="85,131,0,0" VerticalAlignment="Top" Width="45" FontWeight="Bold" FontSize="20" Click="Letter_Button_Click"/>
+            <Button x:Name="btn_c" Content="C" HorizontalAlignment="Left" Height="45" Margin="135,131,0,0" VerticalAlignment="Top" Width="45" FontWeight="Bold" FontSize="20" Click="Letter_Button_Click"/>
+            <Button x:Name="btn_d" Content="D" HorizontalAlignment="Left" Height="45" Margin="185,131,0,0" VerticalAlignment="Top" Width="45" FontWeight="Bold" FontSize="20" Click="Letter_Button_Click"/>
+            <Button x:Name="btn_e" Content="E" HorizontalAlignment="Left" Height="45" Margin="235,131,0,0" VerticalAlignment="Top" Width="45" FontWeight="Bold" FontSize="20" Click="Letter_Button_Click"/>
+            <Button x:Name="btn_f" Content="F" HorizontalAlignment="Left" Height="45" Margin="284,131,0,0" VerticalAlignment="Top" Width="45" FontWeight="Bold" FontSize="20" Click="Letter_Button_Click"/>
+            <Button x:Name="btn_g" Content="G" HorizontalAlignment="Left" Height="45" Margin="333,131,0,0" VerticalAlignment="Top" Width="45" FontWeight="Bold" FontSize="20" Click="Letter_Button_Click"/>
+            <Button x:Name="btn_h" Content="H" HorizontalAlignment="Left" Height="45" Margin="383,131,0,0" VerticalAlignment="Top" Width="45" FontWeight="Bold" FontSize="20" Click="Letter_Button_Click"/>
+            <Button x:Name="btn_i" Content="I" HorizontalAlignment="Left" Height="45" Margin="432,131,0,0" VerticalAlignment="Top" Width="45" FontWeight="Bold" FontSize="20" Click="Letter_Button_Click"/>
+            <Button x:Name="btn_j" Content="J" HorizontalAlignment="Left" Height="45" Margin="58,181,0,0" VerticalAlignment="Top" Width="45" FontWeight="Bold" FontSize="20" Click="Letter_Button_Click"/>
+            <Button x:Name="btn_k" Content="K" HorizontalAlignment="Left" Height="45" Margin="108,181,0,0" VerticalAlignment="Top" Width="45" FontWeight="Bold" FontSize="20" Click="Letter_Button_Click"/>
+            <Button x:Name="btn_l" Content="L" HorizontalAlignment="Left" Height="45" Margin="158,181,0,0" VerticalAlignment="Top" Width="45" FontWeight="Bold" FontSize="20" Click="Letter_Button_Click"/>
+            <Button x:Name="btn_m" Content="M" HorizontalAlignment="Left" Height="45" Margin="208,181,0,0" VerticalAlignment="Top" Width="45" FontWeight="Bold" FontSize="20" Click="Letter_Button_Click"/>
+            <Button x:Name="btn_n" Content="N" HorizontalAlignment="Left" Height="45" Margin="258,181,0,0" VerticalAlignment="Top" Width="45" FontWeight="Bold" FontSize="20" Click="Letter_Button_Click"/>
+            <Button x:Name="btn_o" Content="O" HorizontalAlignment="Left" Height="45" Margin="307,181,0,0" VerticalAlignment="Top" Width="45" FontWeight="Bold" FontSize="20" Click="Letter_Button_Click"/>
+            <Button x:Name="btn_p" Content="P" HorizontalAlignment="Left" Height="45" Margin="357,181,0,0" VerticalAlignment="Top" Width="45" FontWeight="Bold" FontSize="20" Click="Letter_Button_Click"/>
+            <Button x:Name="btn_q" Content="Q" HorizontalAlignment="Left" Height="45" Margin="407,181,0,0" VerticalAlignment="Top" Width="45" FontWeight="Bold" FontSize="20" Click="Letter_Button_Click"/>
+            <Button x:Name="btn_r" Content="R" HorizontalAlignment="Left" Height="45" Margin="35,233,0,0" VerticalAlignment="Top" Width="45" FontWeight="Bold" FontSize="20" Click="Letter_Button_Click"/>
+            <Button x:Name="btn_s" Content="S" HorizontalAlignment="Left" Height="45" Margin="85,233,0,0" VerticalAlignment="Top" Width="45" FontWeight="Bold" FontSize="20" Click="Letter_Button_Click"/>
+            <Button x:Name="btn_t" Content="T" HorizontalAlignment="Left" Height="45" Margin="135,233,0,0" VerticalAlignment="Top" Width="45" FontWeight="Bold" FontSize="20" Click="Letter_Button_Click"/>
+            <Button x:Name="btn_u" Content="U" HorizontalAlignment="Left" Height="45" Margin="185,233,0,0" VerticalAlignment="Top" Width="45" FontWeight="Bold" FontSize="20" Click="Letter_Button_Click"/>
+            <Button x:Name="btn_v" Content="V" HorizontalAlignment="Left" Height="45" Margin="235,233,0,0" VerticalAlignment="Top" Width="45" FontWeight="Bold" FontSize="20" Click="Letter_Button_Click"/>
+            <Button x:Name="btn_x" Content="X" HorizontalAlignment="Left" Height="45" Margin="285,233,0,0" VerticalAlignment="Top" Width="45" FontWeight="Bold" FontSize="20" Click="Letter_Button_Click"/>
+            <Button x:Name="btn_y" Content="Y" HorizontalAlignment="Left" Height="45" Margin="335,233,0,0" VerticalAlignment="Top" Width="45" FontWeight="Bold" FontSize="20" Click="Letter_Button_Click"/>
+            <Button x:Name="btn_z" Content="Z" HorizontalAlignment="Left" Height="45" Margin="385,233,0,0" VerticalAlignment="Top" Width="45" FontWeight="Bold" FontSize="20" Click="Letter_Button_Click"/>
+            <Button x:Name="btn_w" Content="W" HorizontalAlignment="Left" Height="45" Margin="434,233,0,0" VerticalAlignment="Top" Width="45" FontWeight="Bold" FontSize="20" Click="Letter_Button_Click"/>
+ 
+            <TextBlock x:Name="txt_mistake1" HorizontalAlignment="Left" Height="31" Margin="35,305,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="30" Background="#FF00AA27" FontSize="22" FontWeight="Bold" TextAlignment="Center"/>
+            <TextBlock x:Name="txt_mistake2" HorizontalAlignment="Left" Height="31" Margin="71,305,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="30" Background="#FF35B6FF" FontSize="22" FontWeight="Bold" TextAlignment="Center"/>
+            <TextBlock x:Name="txt_mistake3" HorizontalAlignment="Left" Height="31" Margin="108,305,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="30" Background="#FF970067" FontSize="22" FontWeight="Bold" TextAlignment="Center"/>
+            <TextBlock x:Name="txt_mistake4" HorizontalAlignment="Left" Height="31" Margin="143,305,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="30" Background="#FFFFA302" FontSize="22" FontWeight="Bold" TextAlignment="Center"/>
+            <TextBlock x:Name="txt_mistake5" HorizontalAlignment="Left" Height="31" Margin="178,305,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="30" Background="#FF004DAA" FontSize="22" FontWeight="Bold" TextAlignment="Center"/>
+            <TextBlock x:Name="txt_mistake6" HorizontalAlignment="Left" Height="31" Margin="214,305,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="30" Background="#FFDC0000" FontSize="22" FontWeight="Bold" TextAlignment="Center"/>
+            
+            <TextBlock x:Name="txt_displayed_word" HorizontalAlignment="Left" Height="70" Margin="25,372,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="620" Background="#FFFFDC00" FontSize="20"/>
+
 
         </Grid>
 
-        <Grid x:Name="grid_statistics" Visibility="Collapsed">
+        <Grid x:Name="grid_statistics" Visibility="Collapsed" Margin="0,26,0,0">
 
         </Grid>
+
     </Grid>
 </Window>

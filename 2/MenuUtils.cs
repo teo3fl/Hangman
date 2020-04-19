@@ -14,7 +14,7 @@ namespace _2
         private static string UserFilePath { get; set; }
 
         public static List<BitmapImage> Images { get; private set; }
-        private static string ImagesFilePath { get; set; }
+        private static string ImagesPath { get; set; }
         public static int CurrentImageIndex { get; set; }
 
         public static bool Initialized { get; private set; }
@@ -29,7 +29,7 @@ namespace _2
             InitializeUsers();
 
             //profile pics
-            ImagesFilePath = "..\\..\\Resources\\Images\\Profile";
+            ImagesPath = "..\\..\\Resources\\Images\\Profile";
             InitializeImages();
             CurrentImageIndex = 0;
 
@@ -50,7 +50,7 @@ namespace _2
 
             foreach (string name in imageNames)
             {
-                Images.Add(new BitmapImage(new Uri(ImagesFilePath + $"\\{name}.jpg", UriKind.Relative)));
+                Images.Add(new BitmapImage(new Uri(ImagesPath + $"\\{name}.jpg", UriKind.Relative)));
             }
         }
 

@@ -65,12 +65,15 @@ namespace _2
 
         private void btn_play_Click(object sender, RoutedEventArgs e)
         {
-            // TODO
+            if (list_users.SelectedItem != null)
+            {
+                GameUtils.User = MenuUtils.Users[list_users.SelectedItem.ToString()];
 
-            Window window = new GameWindow();
-            window.Show();
+                Window window = new GameWindow();
+                window.Show();
 
-            Close();
+                Close();
+            }
         }
 
         private void btn_cancel_Click(object sender, RoutedEventArgs e)
